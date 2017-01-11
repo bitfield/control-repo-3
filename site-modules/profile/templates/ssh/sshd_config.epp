@@ -1,0 +1,13 @@
+<%- | Array[String] $allow_users | -%>
+# File is managed by Puppet
+
+AcceptEnv LANG LC_*
+ChallengeResponseAuthentication no
+GSSAPIAuthentication no
+PermitRootLogin no
+PrintMotd no
+Subsystem sftp /usr/lib/openssh/sftp-server
+AllowUsers <%= join($allow_users, ',') %>
+UseDNS no
+UsePAM yes
+X11Forwarding yes
