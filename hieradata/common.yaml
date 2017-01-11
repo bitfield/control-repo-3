@@ -1,2 +1,16 @@
 ---
-message: "This node is using common data"
+  users:
+    'john':
+      comment: 'John Arundel'
+      uid: '1010'
+      sshkeys:
+        - 'ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAIEA3ATqENg+GWACa2BzeqTdGnJhNoBer8x6pfWkzNzeM8Zx7/2Tf2pl7kHdbsiTXEUawqzXZQtZzt/j3Oya+PZjcRpWNRzprSmd2UxEEPTqDw9LqY5S2B8og/NyzWaIYPsKoatcgC7VgYHplcTbzEhGu8BsoEVBGYu3IRy5RkAcZik= john@susie'
+    'bridget':
+      comment: 'Bridget X. Zample'
+      uid: '1011'
+      sshkeys:
+        - 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCiTvHgzkf9TGBIpnIUBRbsWaRNBqzrLY/OoQpzqprGFLuTzzb8MaGI9Q6GPIhil5HyXE7PWPyuwcBA4mJhIHBXWqQC5o59cdtrkgJwAybSK7z5oVt67B0qieDG/cbasxr52nMAJC3dBEF4W1s69VSq5+wLFD01iW= bridget'
+  allow_users:
+    - 'john'
+    - 'bridget'
+    - 'vagrant'
