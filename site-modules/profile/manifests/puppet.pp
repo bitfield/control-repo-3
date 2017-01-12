@@ -5,8 +5,8 @@ class profile::puppet {
   }
 
   service { ['puppet', 'mcollective', 'pxp-agent']:
-    ensure  => stopped, # Puppet runs from cron
-    enable  => false,
+    ensure => stopped, # Puppet runs from cron
+    enable => false,
   }
 
   cron { 'run-puppet':
