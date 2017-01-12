@@ -14,3 +14,7 @@
     - 'john'
     - 'bridget'
     - 'vagrant'
+  sudoers:
+    - 'john'
+    - 'bridget'
+    - 'vagrant'
