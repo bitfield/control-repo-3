@@ -7,7 +7,7 @@ GSSAPIAuthentication no
 PermitRootLogin no
 PrintMotd no
 Subsystem sftp /usr/lib/openssh/sftp-server
-AllowUsers <%= join($allow_users, ',') %>
+AllowUsers <%= join($allow_users, ' ') %>
 UseDNS no
 UsePAM yes
 X11Forwarding yes

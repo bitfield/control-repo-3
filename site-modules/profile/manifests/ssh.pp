@@ -6,10 +6,10 @@ class profile::ssh {
     content => epp('profile/ssh/sshd_config.epp', {
       'allow_users' => hiera('allow_users'),
     }),
-    notify  => Service['sshd'],
+    notify  => Service['ssh'],
   }
 
-  service { 'sshd':
+  service { 'ssh':
     ensure => running,
     enable => true,
   }
