@@ -1,2 +1,3 @@
 #!/bin/bash
-/opt/puppetlabs/bin/puppet apply --environment production /etc/puppetlabs/code/environments/${environment}/manifests/* $*
+environment=${ENVIRONMENT:-production}
+/opt/puppetlabs/bin/puppet apply --environment ${environment} /etc/puppetlabs/code/environments/${environment}/manifests/* $*
