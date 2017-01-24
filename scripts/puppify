@@ -17,7 +17,7 @@ OPTIONS="-oStrictHostKeyChecking=no"
 SCP="scp -oStrictHostKeyChecking=no $IDENTITY"
 SSH="ssh $IDENTITY"
 echo -n "Copying bootstrap script... "
-scp ${IDENTITY} ${OPTIONS} bootstrap.sh ubuntu@${TARGET}:/tmp
+scp ${IDENTITY} ${OPTIONS} $(dirname $0)/bootstrap.sh ubuntu@${TARGET}:/tmp
 echo "done."
 echo -n "Bootstrapping... "
 ssh ${IDENTITY} ${OPTIONS} ubuntu@${TARGET} "sudo bash /tmp/bootstrap.sh ${PUPPET_REPO} ${HOSTNAME} ${BRANCH}"
