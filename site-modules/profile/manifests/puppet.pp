@@ -26,16 +26,6 @@ class profile::puppet {
     mode   => '0755',
   }
 
-  file { '/usr/local/bin/plock':
-    source => 'puppet:///modules/profile/puppet/plock.sh',
-    mode   => '0755',
-  }
-
-  file { '/usr/local/bin/punlock':
-    source => 'puppet:///modules/profile/puppet/punlock.sh',
-    mode   => '0755',
-  }
-
   file { '/tmp/puppet.lastrun':
     content => strftime('%F %T'),
     backup  => false,
