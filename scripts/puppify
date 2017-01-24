@@ -14,8 +14,6 @@ TARGET=$1
 HOSTNAME=${2}
 BRANCH=${3:-production}
 OPTIONS="-oStrictHostKeyChecking=no"
-SCP="scp -oStrictHostKeyChecking=no $IDENTITY"
-SSH="ssh $IDENTITY"
 echo -n "Copying bootstrap script... "
 scp ${IDENTITY} ${OPTIONS} $(dirname $0)/bootstrap.sh ubuntu@${TARGET}:/tmp
 echo "done."
