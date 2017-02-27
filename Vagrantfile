@@ -41,6 +41,8 @@ Vagrant.configure("2") do |config|
   # argument is a set of non-required options.
   config.vm.synced_folder ".", "/etc/puppetlabs/code/environments/production"
 
+  config.vm.hostname = "demo"
+
   # Provider-specific configuration so you can fine-tune various
   # backing providers for Vagrant. These expose provider-specific options.
   # Example for VirtualBox:
@@ -70,4 +72,9 @@ Vagrant.configure("2") do |config|
   #   apt-get update
   #   apt-get install -y apache2
   # SHELL
+  config.vm.provision "puppet" do |puppet|
+    puppet.environment_path = ["vm", "/etc/puppetlabs/code/environments"]
+    puppet.environment = "production"
+    #puppet.manifest_file = "site.pp"
+  end
 end
