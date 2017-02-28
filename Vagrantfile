@@ -75,6 +75,5 @@ Vagrant.configure("2") do |config|
   config.vm.provision "puppet" do |puppet|
     puppet.environment_path = ["vm", "/etc/puppetlabs/code/environments"]
     puppet.environment = "production"
-    #puppet.manifest_file = "site.pp"
   end
 end
