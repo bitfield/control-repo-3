@@ -5,7 +5,7 @@ if [[ "$*" == "" ]]
 then
   cat <<USAGE
 Usage: $0 TARGET HOSTNAME [BRANCH]
-Install Puppet on the machine TARGET (IP address or DNS name) and run 
+Install Puppet on the node TARGET (IP address or DNS name) and run 
 the bootstrap process. Set the hostname to HOSTNAME, and optionally use 
 the control repo branch BRANCH.
 USAGE
