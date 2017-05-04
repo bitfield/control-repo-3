@@ -6,7 +6,7 @@ ChallengeResponseAuthentication no
 GSSAPIAuthentication no
 PermitRootLogin no
 PrintMotd no
-Subsystem sftp /usr/lib/openssh/sftp-server
+Subsystem sftp internal-sftp
 AllowUsers <%= join($allow_users, ' ') %>
 UseDNS no
 UsePAM yes
