@@ -1,4 +1,4 @@
-# Common profile for all servers
+# Common profile for all nodes
 class profile::common {
   include profile::ntp
   include profile::puppet
