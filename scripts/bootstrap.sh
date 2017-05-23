@@ -2,6 +2,10 @@
 PUPPET_REPO=$1
 HOSTNAME=$2
 BRANCH=$3
+if [ "$#" -ne 3 ]; then
+  echo "Usage: $0 PUPPET_REPO HOSTNAME BRANCH"
+  exit 1
+fi
 hostname ${HOSTNAME}
 echo ${HOSTNAME} >/etc/hostname
 source /etc/lsb-release
