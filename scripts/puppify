@@ -1,8 +1,7 @@
 #!/bin/bash
 PUPPET_REPO=https://github.com/bitfield/control-repo.git
 IDENTITY="-i /Users/john/.ssh/pbg.pem"
-if [[ "$*" == "" ]]
-then
+if [ "$#" -lt 2 ]; then
   cat <<USAGE
 Usage: $0 TARGET HOSTNAME [BRANCH]
 Install Puppet on the node TARGET (IP address or DNS name) and run 
