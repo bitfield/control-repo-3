@@ -9,6 +9,7 @@ fi
 hostname ${HOSTNAME}
 echo ${HOSTNAME} >/etc/hostname
 source /etc/lsb-release
+apt-key adv --fetch-keys http://apt.puppetlabs.com/DEB-GPG-KEY-puppet
 wget http://apt.puppetlabs.com/puppetlabs-release-pc1-${DISTRIB_CODENAME}.deb
 dpkg -i puppetlabs-release-pc1-${DISTRIB_CODENAME}.deb
 apt-get update
