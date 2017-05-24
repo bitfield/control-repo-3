@@ -18,7 +18,6 @@ mv production production.orig
 git clone ${PUPPET_REPO} production
 cd production
 git checkout ${BRANCH}
-echo 'environmentpath=$codedir/environments' >>/etc/puppetlabs/puppet/puppet.conf
 /opt/puppetlabs/puppet/bin/gem install r10k --no-rdoc --no-ri
 /opt/puppetlabs/puppet/bin/r10k puppetfile install --verbose
 /opt/puppetlabs/bin/puppet apply --environment=production /etc/puppetlabs/code/environments/production/manifests
