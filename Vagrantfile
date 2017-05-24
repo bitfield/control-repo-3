@@ -72,8 +72,5 @@ Vagrant.configure("2") do |config|
   #   apt-get update
   #   apt-get install -y apache2
   # SHELL
-  config.vm.provision "puppet" do |puppet|
-    puppet.environment_path = ["vm", "/etc/puppetlabs/code/environments"]
-    puppet.environment = "production"
-  end
+  config.vm.provision "shell", path: "scripts/vagrant_provision.sh"
 end
