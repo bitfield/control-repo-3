@@ -11,7 +11,8 @@ echo ${HOSTNAME} >/etc/hostname
 source /etc/lsb-release
 wget http://apt.puppetlabs.com/puppetlabs-release-pc1-${DISTRIB_CODENAME}.deb
 dpkg -i puppetlabs-release-pc1-${DISTRIB_CODENAME}.deb
-apt-get update && apt-get -y install git puppet-agent
+apt-get update
+apt-get -y install git puppet-agent
 cd /etc/puppetlabs/code/environments
 mv production production.orig
 git clone ${PUPPET_REPO} production
