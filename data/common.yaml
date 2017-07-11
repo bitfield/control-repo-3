@@ -13,8 +13,15 @@
   allow_users:
     - 'john'
     - 'bridget'
-    - 'vagrant'
+    - 'ubuntu'
   sudoers:
     - 'john'
     - 'bridget'
-    - 'vagrant'
+    - 'ubuntu'
+  classes:
+    - profile::ntp
+    - profile::puppet
+    - profile::ssh
+    - profile::sudoers
+    - profile::timezone
+    - profile::users

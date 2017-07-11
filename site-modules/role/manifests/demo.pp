@@ -1,4 +1,4 @@
 # Be the demo node
 class role::demo {
-  include profile::common
+  notice("Hi, I'm the demo node!")
 }
