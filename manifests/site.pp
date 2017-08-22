@@ -1,1 +1,1 @@
-include(lookup('classes', { 'merge' =>  'unique' }))
+include(lookup('classes', Array[String], 'unique'))
