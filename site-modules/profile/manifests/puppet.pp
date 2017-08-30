@@ -21,9 +21,4 @@ class profile::puppet {
     source => 'puppet:///modules/profile/puppet/papply.sh',
     mode   => '0755',
   }
-
-  file { '/tmp/puppet.lastrun':
-    content => strftime('%F %T'),
-    backup  => false,
-  }
 }
