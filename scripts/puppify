@@ -1,5 +1,5 @@
 #!/bin/bash
-PUPPET_REPO=https://github.com/bitfield/control-repo.git
+PUPPET_REPO=https://github.com/bitfield/control-repo-3.git
 IDENTITY="-i /Users/john/.ssh/pbg.pem"
 if [ "$#" -lt 2 ]; then
   cat <<USAGE
